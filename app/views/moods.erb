@@ -15,6 +15,7 @@
               <h4><%= mood.mood %></h4>
               <input type="hidden" name="mood_id" value="<%= mood.id %>">
               <p><img src="<%=mood.image_url%>"></p>
+              Copy this link to share: <p><a href="<%=mood.image_url%>"><%=mood.image_url%></a></p>
               <button type="submit" class="btn btn-primary">Delete</button>
             </form>
           </div>
