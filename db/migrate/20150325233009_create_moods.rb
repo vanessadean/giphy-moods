@@ -1,4 +1,4 @@
-class CreateMoods < ActiveRecord::Migration
+class CreateMoods < ActiveRecord::Migration[5.2]
   def up
     create_table :moods do |t|
       t.string  :mood
