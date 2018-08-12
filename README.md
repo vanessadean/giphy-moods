@@ -9,7 +9,7 @@ type: challenges
 
 You're going to build your very own MVC application to translate moods into gifs. Let's do this!
 
-###Part 1 - Using the Giphy API
+### Part 1 - Using the Giphy API
 
 **Step 1** - What's the first letter in MVC stand for? The models! Check out `giph.rb` in the models directory. We've set up a Giph class and some methods to help you connect to the Giphy API. Let's take a look at the `search` method.
 
@@ -38,7 +38,7 @@ and move it into the `post '/results'` route. We don't want to always search for
 
 Great job! You're probably getting some pretty incredible gifs. You might want to save your favorites, huh? Time to build a new feature - the ability to save your favorite gif from the list!
 
-###Part 2 - Saving your favorite gif
+### Part 2 - Saving your favorite gif
 Whenever you add a new feature you need to think about each portion of the MVC. So...
 
 **Step 1** First things first - the M. We'll start off with one model/table for Moods with the following attributes/columns:
