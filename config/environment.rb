@@ -1,8 +1,10 @@
 require 'bundler'
 Bundler.require
 
+Dotenv.load
+
 configure :development do
-  set :database, "sqlite3:db/database.db"
+  set :database, 'sqlite3:db/database.db'
 end
 
 configure :production do

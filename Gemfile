@@ -1,16 +1,17 @@
-source "https://rubygems.org"
+source 'https://rubygems.org'
 
-gem "sinatra"
-gem "activerecord"
-gem "sinatra-activerecord"
-gem "rake"
-gem 'bcrypt'
+ruby '2.5.5'
+
+gem 'activerecord'
+gem 'dotenv'
+gem 'rake'
+gem 'sinatra'
+gem 'sinatra-activerecord'
 
 group :development do
-  gem "sqlite3"
-  gem "pry"
-  gem "shotgun"
-  gem "tux"
+  gem 'pry'
+  gem 'sqlite3'
+  gem 'tux'
 end
 
 group :production do

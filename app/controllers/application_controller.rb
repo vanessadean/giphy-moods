@@ -3,12 +3,11 @@ require './app/models/giph.rb'
 require './app/models/mood.rb'
 
 class ApplicationController < Sinatra::Base
-
   configure do
     set :public_folder, 'public'
     set :views, 'app/views'
-      enable :sessions
-    set :session_secret, 'fwitter'
+    enable :sessions
+    set :session_secret, ENV['SESSION_SECRET']
   end
 
   get '/' do
@@ -23,8 +22,8 @@ class ApplicationController < Sinatra::Base
   end
 
   post '/save' do
-    Mood.create(:mood => params[:mood], :image_url => params[:url])
-    redirect('/moods')
+    Mood.create(mood: params[:mood], image_url: params[:url])
+    redirect '/moods'
   end
 
   get '/moods' do
@@ -34,6 +33,6 @@ class ApplicationController < Sinatra::Base
 
   post '/destroy' do
     Mood.destroy(params[:mood_id])
-    redirect('/')
+    redirect '/'
   end
 end

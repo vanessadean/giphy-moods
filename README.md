@@ -19,7 +19,7 @@ gipher = Giph.new
 @photos = gipher.search("happy")
 ```
 
-to your the `'\'` route in your application controller. Now we've got some `@photos` that we can display in `index.erb`. That file is in which directory? Did you say views?
+to the `'/'` route in your application controller. Now we've got some `@photos` that we can display in `index.erb`. That file is in which directory? Did you say views?
 
 **Step 2** - On to the V in MVC. We've got `@photos` - an array of image urls - and we want to display each of these images in `index.erb` (for now). You know how to do that! Now go do it.
 

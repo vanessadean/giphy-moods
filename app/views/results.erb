@@ -13,8 +13,8 @@
         <input type="hidden" name="mood" value="<%= @mood %>">
         <% @photo_urls[0..5].each do |url| %>
           <p>
-            <input type="radio" name="url" value="<%=url%>">
-            <img src="<%=url%>">
+            <input type="radio" name="url" value="<%= url %>">
+            <img src="<%= url %>">
           </p>
         <% end %>
         <input type="submit" class="btn btn-primary btn-lg" value="Save for Later">
