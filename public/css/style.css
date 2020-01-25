@@ -25,10 +25,14 @@ img {
 }
 
 h4 {
-  color: #B0254F;
+  color: #e34977;
   margin-bottom: 5px;
 }
 
 h1 {
   font-family: 'Audiowide', cursive;
+}
+
+a {
+  color: #3dd451;
 }
