@@ -1,27 +1,14 @@
-<!doctype html>
-<html>
-  <head>
-    <title>Giphy Moods</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-  </head>
-  <body>
-    <div class="container">
-      <h1><a href="/">The Giphy Mood Translator</a></h1>
-      <h3>Here are some saved gifs that you can use:</h3>
-        <% @moods.each do |mood| %>
-          <div class="mood">
-            <form action="/destroy" method="post">
-              <h4><%= mood.mood %></h4>
-              <input type="hidden" name="mood_id" value="<%= mood.id %>">
-              <p><img src="<%= mood.image_url %>"></p>
-              Copy this link to share: <p><a href="<%= mood.image_url %>"><%= mood.image_url %></a></p>
-              <button type="submit" class="btn btn-primary">Delete</button>
-            </form>
-          </div>
-        <% end %>
+<h3>Here are some saved gifs that you can use:</h3>
+<div class="row">
+  <% @moods.each do |mood| %>
+    <div class="col-xs-12 col-md-6 mt-25">
+      <form action="/destroy" method="post">
+        <h4><%= mood.mood %></h4>
+        <input type="hidden" name="mood_id" value="<%= mood.id %>">
+        <p><img src="<%= mood.image_url %>"></p>
+        Copy this link to share: <p><a href="<%= mood.image_url %>"><%= mood.image_url %></a></p>
+        <button type="submit" class="btn btn-primary">Delete</button>
+      </form>
     </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-  </body>
-</html>
+  <% end %>
+</div>

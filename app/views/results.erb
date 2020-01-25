@@ -1,26 +1,13 @@
-<!doctype html>
-<html>
-  <head>
-    <title>Giphy Moods</title>
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
-    <link rel="stylesheet" href="/css/style.css">
-  </head>
-  <body>
-    <div class="container">
-      <h1><a href="/">The Giphy Mood Translator</a></h1>
-      <h3>Here are some giphs to help you express how <%= @mood %> you are feeling:</h3>
-      <form action="/save" method="post">
-        <input type="hidden" name="mood" value="<%= @mood %>">
-        <% @photo_urls[0..5].each do |url| %>
-          <p>
-            <input type="radio" name="url" value="<%= url %>">
-            <img src="<%= url %>">
-          </p>
-        <% end %>
-        <input type="submit" class="btn btn-primary btn-lg" value="Save for Later">
-      </form>
-    </div>
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
-    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/js/bootstrap.min.js"></script>
-  </body>
-</html>
+<h3>Here are some giphs to help you express how <%= @mood %> you are feeling:</h3>
+<form action="/save" method="post">
+  <div class="row">
+    <input type="hidden" name="mood" value="<%= @mood %>">
+    <% @photo_urls[0..5].each do |url| %>
+      <div class="col-xs-12 col-md-6">
+        <input type="radio" name="url" value="<%= url %>">
+        <img src="<%= url %>">
+      </div>
+    <% end %>
+  </div>
+  <input type="submit" class="btn btn-primary btn-lg mt-25 ml-10" value="Save for Later">
+</form>
