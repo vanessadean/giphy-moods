@@ -4,6 +4,7 @@ source 'https://rubygems.org'
 
 ruby '2.5.5'
 
+gem 'activerecord', '~> 5'
 gem 'dotenv'
 gem 'rake'
 gem 'sinatra'
